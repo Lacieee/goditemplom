@@ -1,5 +1,6 @@
 <div class="container">
     <?php if (isset($_SESSION["id"])) {?>
+        <button class="btn btn-success" style="height:90wh; width:3wv;></button>
         <div class="card">
         <img src="<?php echo get["cancer"]; ?>" class="card-img-top" alt="leszarom">
             <div class="card-body">
@@ -7,6 +8,7 @@
                 <p class="card-text">pornótext.</p>
             </div>
         </div>
+        <button class="btn btn-success" style="height:90wh; width:3wv;"></button>
     <?php } ?>
     <br>
     <div class="container">
