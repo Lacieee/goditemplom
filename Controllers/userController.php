@@ -81,3 +81,38 @@ private function Login($username, $password){
     }
     return $errorMsg;
 }
+
+function signUp()
+    {
+        $db = db::get();
+        if (isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["password"])) {
+            $userName = $db->escape($_POST["username"]);
+            $email = $db->escape($_POST["email"]);
+            $password = $db->escape($_POST["password"]);
+            $passwordCheck = $db->escape($_POST["passwordCheck"]);
+
+            if (empty($userName) && empty($email) && empty($password)) {
+                $errorMsg = "Minden mező kitöltése kötelező!";
+            } else {
+
+                $rand=rand(1,999);
+                if($db->numnrows("SELECT * FROM users WHERE email =" . $email)) {
+                    $errorMsg ="Ez az email már registrálva van!";
+                }elseif ($db->numnrows("SELECT * FROM users WHERE username =" . $userName)){
+                    $errorMsg="Ez a felhasználónév már használatban van! Próbáld meg a ".$userName.$rand." névvel";
+                }elseif (count($_POST["password"]) < 8){
+                    $errorMsg="A jelszónak min 8 karakternek kell lennie!";
+                }elseif (count($_POST["username"]) < 3){
+                    $errorMsg="A felhasználó névnek min 3 karakternek kell lennie!";
+                }elseif($password != $passwordCheck){
+                    $errorMsg="A két jelszó nem egyezik!";
+                }else{
+                    $hashedPassword = md5($password);
+                    $sql ="INSERT INTO users (username,email,password) VALUES ('$userName','$email','$hashedPassword')";
+                    $db->query($sql);
+                }
+            }
+        }
+        return $errorMsg;
+    }
+
