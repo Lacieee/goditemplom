@@ -12,7 +12,7 @@
   <a class="navbar-brand" href="#">Navbar</a>
   <ul class="nav nav-pills">
     <li class="nav-item">
-      <a class="nav-link" href="#fat">@fat</a>
+      <a class="nav-link" href="#" onclick="render('regilogin.php')">Register or Login</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#" onclick="render('newGirl.php')">Add new girl</a>
