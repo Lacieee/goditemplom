@@ -58,7 +58,7 @@ function updateMyUser($userName,$email,$oldPass,$newpass,$renewpass){
   	return $msg;
 }
 //***********************login
-private function Login($username, $password){
+function Login($username, $password){
     if(!empty($username) && !empty($password)){
         if($password == $passwordAgain){
             $queryString = "SELECT username FROM users WHERE username = '"$username"'";
@@ -82,14 +82,14 @@ private function Login($username, $password){
     return $errorMsg;
 }
 
-function signUp()
+function signUp($argUserName,$argEmail,$argPassword,$argPasswordCheck)
     {
         $db = db::get();
-        if (isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["password"])) {
-            $userName = $db->escape($_POST["username"]);
-            $email = $db->escape($_POST["email"]);
-            $password = $db->escape($_POST["password"]);
-            $passwordCheck = $db->escape($_POST["passwordCheck"]);
+        if (isset($argUserName) && isset($argEmail) && isset($argPassword) && isset($argPasswordCheck)) {
+            $userName = $db->escape($argUserName);
+            $email = $db->escape($argEmail);
+            $password = $db->escape($argPassword);
+            $passwordCheck = $db->escape($argPasswordCheck);
 
             if (empty($userName) && empty($email) && empty($password)) {
                 $errorMsg = "Minden mező kitöltése kötelező!";
