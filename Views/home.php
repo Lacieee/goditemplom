@@ -8,4 +8,9 @@
             </div>
         </div>
     <?php } ?>
+    <div class="container">
+        <div class="jumbotron">
+            <h4 class="text-center">At the moment your are not logged in! <br> please login to view the page content!</h4>
+        </div>
+    </div>
 </div>
