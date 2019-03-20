@@ -9,8 +9,11 @@
 </head>
 <body>
     <nav id="navbar-example2" class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Tinder</a>
   <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#" onclick="render('home.php')">Home</a>
+    </li>
     <li class="nav-item">
       <a class="nav-link" href="#" onclick="render('regilogin.php')">Register or Login</a>
     </li>
