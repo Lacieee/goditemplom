@@ -8,9 +8,11 @@
             </div>
         </div>
     <?php } ?>
+    <br>
     <div class="container">
         <div class="jumbotron">
-            <h4 class="text-center">At the moment your are not logged in! <br> please login to view the page content!</h4>
+            <h4 class="text-center">At the moment your are not logged in! <br> Please login to view the page content!</h4>
         </div>
+        <a type="button" id="login" name="login" href="#" onclick="render('regilogin.php')" class="btn btn-primary btn-lg btn-block">Login!</button>
     </div>
 </div>
