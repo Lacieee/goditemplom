@@ -1,3 +1,4 @@
+<div class="container">
 <form>
     <div class="form-group">
         <label for="name">Név</label>
@@ -33,3 +34,4 @@
     </div>
     <button type="submit" id="submitForm" name="submitForm" class="btn btn-primary">Felvisz</button>
     </form>
+    </div>
