@@ -1,5 +1,7 @@
+<br>
 <div class="container">
     <div class="jumbotron main-wrapper">
+        <h1>Új lány felvétele</h1>
         <form>
             <div class="form-group">
                 <label for="name">Név</label>
@@ -33,7 +35,9 @@
                 <label for="height">Magasság</label>
                 <input type="text" class="form-control" id="height" name="height" placeholder="Enter the Height of her">
             </div>
+            <div class="form-group text-center">
             <button type="submit" id="submitForm" name="submitForm" class="btn btn-primary">Felvisz</button>
+            </div>
         </form>
     </div>
 </div>
