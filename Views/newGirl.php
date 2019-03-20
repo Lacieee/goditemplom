@@ -1,6 +1,6 @@
 <br>
 <div class="container">
-    <div class="jumbotron main-wrapper">
+    <div class="jumbotron main-wrapper bounceIn">
         <div class="text-center">
         <h1>New girl</h1>
         </div>

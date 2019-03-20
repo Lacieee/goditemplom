@@ -1,5 +1,5 @@
 <br>
-<section class="container">
+<section class="container bounceIn">
 		<div class="main-wrapper jumbotron text-center">
 		<br>
 		<div class="row">
