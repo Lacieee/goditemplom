@@ -1,7 +1,9 @@
 <br>
 <div class="container">
     <div class="jumbotron main-wrapper">
+        <div class="text-center">
         <h1>New girl</h1>
+        </div>
         <form>
             <div class="form-group">
                 <label for="name">Name</label>
